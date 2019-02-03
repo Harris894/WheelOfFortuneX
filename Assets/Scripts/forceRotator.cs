@@ -24,13 +24,15 @@ public class forceRotator : MonoBehaviour
 
     float timeWanted = 10f;
     CircleCollider2D circleCol;
-    
+
+    public grannyBehaviour grannyAnim;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         circleCol = GetComponent<CircleCollider2D>();
         reward = GetComponent<meshGenerator>();
+        //grannyAnim = GetComponent<grannyBehaviour>();
         spinning = false;
         score = 0;
     }
@@ -53,6 +55,8 @@ public class forceRotator : MonoBehaviour
         if (!spinning)
         {
             spinning = true;
+            grannyAnim.StopDance();
+            grannyAnim.LookBehind();
          
             if (rb.angularDrag > 0.5)
             {
@@ -86,6 +90,14 @@ public class forceRotator : MonoBehaviour
     {
         yield return new WaitForSeconds(t);
         score += reward.GetReward().value;
+        if (reward.GetReward().name=="jackpot")
+        {
+            grannyAnim.StartDance();
+        }
+        else
+        {
+            grannyAnim.NotJackpot();
+        }
 
     }
 }
