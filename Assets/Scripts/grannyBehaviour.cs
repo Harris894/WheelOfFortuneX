@@ -7,23 +7,27 @@ public class grannyBehaviour : MonoBehaviour
 
     Animator anim;
     meshGenerator reward;
+    FMOD.Studio.EventInstance jackpot;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         reward = GetComponent<meshGenerator>();
+        jackpot = FMODUnity.RuntimeManager.CreateInstance("event:/Music/jackpot");
     }
 
     public void StartDance()
     {
         
         anim.SetBool("jackpot", true);
+        jackpot.start();
         
     }
 
     public void StopDance()
     {
         anim.SetBool("jackpot", false);
+        jackpot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
     public void LookBehind()

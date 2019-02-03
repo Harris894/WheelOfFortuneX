@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000003E7DDBE8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000086C8E708 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,28 +15,72 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] SoundI::release                          :  (0000000015B4FDC8)
-[LOG] SoundI::release                          :     278205__ianstargem__switch-flip-1 (000000004C13A2B8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2931520
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000009E5FF5CC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC6E8E1220
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC6E8E11F0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC6E8E12F0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC6E8E13B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000087F22C78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='51671__robinhood76__00150-monety-wysypywanie-1', format=2, channels=1, frequency=48000, lengthbytes=44608, lengthpcm=208520, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.977234.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2931520
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000009E5FF5CC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC6E8E1220
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC6E8E11F0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC6E8E12F0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC6E8E13B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000000087F22C78
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='350841__elmasmalo1__level-up-sound-fx', format=2, channels=2, frequency=48000, lengthbytes=64512, lengthpcm=239872, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.190279.
+[LOG] SystemI::createSound                     : filename = C:\Users\Harris\Desktop\Unity\WheelOfFortuneRepo\WheelOfFortuneX\Assets\StreamingAssets\Desktop\Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0000000049E65A58 : node = 000000008746A350
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000449A8A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000049E65A58
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Harris\Desktop\Unity\WheelOfFortuneRepo\WheelOfFortuneX\Assets\StreamingAssets\Desktop\Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2931520
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000008746A468
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 6360
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='The Tattoos - La Cucaracha (Trumpet) (Oldie) (Latin American Song) (Dance Music)', format=2, channels=2, frequency=48000, lengthbytes=2807968, lengthpcm=10610311, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.515228.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000049E65A58
+[LOG] SoundI::getSubSound                      : sound 0000000049E65A58.  Subsound index 0 / 1
+[LOG] SoundI::release                          :  (0000000087F95E98)
+[LOG] SoundI::release                          :     51671__robinhood76__00150-monety-wysypywanie-1 (0000000021103418)
+[LOG] SoundI::release                          :  (0000000087F96008)
+[LOG] SoundI::release                          :     350841__elmasmalo1__level-up-sound-fx (00000000211035B8)
+[LOG] SoundI::release                          : The Tattoos - La Cucaracha (Trumpet) (Oldie) (Latin American Song) (Dance Music) (0000000049E65A58)
+[LOG] SoundI::release                          :     The Tattoos - La Cucaracha (Trumpet) (Oldie) (Latin American Song) (Dance Music) (00000000449A80D8)
+[LOG] SoundI::release                          :     The Tattoos - La Cucaracha (Trumpet) (Oldie) (Latin American Song) (Dance Music) (0000000049C1B9F8)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.

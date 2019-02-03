@@ -17,9 +17,10 @@ MonoBehaviour:
   - {fileID: 114177059818925030}
   EditorEvents:
   - {fileID: 114196613389504582}
+  - {fileID: 114843010398344060}
   MasterBankRef: {fileID: 114177059818925030}
   StringsBankRef: {fileID: 114557312811869170}
-  stringsBankWriteTime: 636845828067532480
+  stringsBankWriteTime: 636848319452616742
   cacheVersion: 2
 --- !u!114 &114177059818925030
 MonoBehaviour:
@@ -35,11 +36,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Harris\Desktop\Unity\WheelOfFortuneRepo\WheelOfFortuneX\Assets\StreamingAssets\Desktop\Master
     Bank.bank
-  lastModified: 636845828067462659
+  lastModified: 636848319452546927
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 25920
+    Value: 2947040
   Exists: 1
 --- !u!114 &114196613389504582
 MonoBehaviour:
@@ -77,12 +78,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\StreamingAssets\Desktop\Master Bank.strings.bank
-  lastModified: 636845828067532480
+  lastModified: 636848319452616742
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 730
+    Value: 786
   Exists: 1
+--- !u!114 &114843010398344060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/jackpot
+  guid: 8fd1cc8da2439044be86d973102abed9
+  Banks:
+  - {fileID: 114177059818925030}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 24800
 --- !u!114 &114947554600830076
 MonoBehaviour:
   m_ObjectHideFlags: 0
