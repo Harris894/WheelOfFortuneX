@@ -17,22 +17,20 @@ public class forceRotator : MonoBehaviour
     int score;
     [HideInInspector]
     public TextMeshProUGUI scoreText;
+    [HideInInspector]
+    public grannyBehaviour grannyAnim;
 
-    
+
     float rotY;
     Rigidbody2D rb;
 
     float timeWanted = 10f;
-    CircleCollider2D circleCol;
 
-    public grannyBehaviour grannyAnim;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        circleCol = GetComponent<CircleCollider2D>();
         reward = GetComponent<meshGenerator>();
-        //grannyAnim = GetComponent<grannyBehaviour>();
         spinning = false;
         score = 0;
     }
@@ -86,6 +84,7 @@ public class forceRotator : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
+    //End the round after x(7) seconds. Add the value to the score, and set animations to play.
     IEnumerator endRound(float t)
     {
         yield return new WaitForSeconds(t);

@@ -13,6 +13,11 @@ public class Item
 [RequireComponent(typeof(MeshFilter))]
 public class meshGenerator : MonoBehaviour
 {
+    [Header("Circle Settings")]
+    public float radius = 5f;
+
+    [Header("Values Settings")]
+    [Tooltip("Use random values, if not then populate the list below with your own values")]
     public bool useRandomValues;
 
     public int minValue;
@@ -29,7 +34,6 @@ public class meshGenerator : MonoBehaviour
     private Vector2Int textureSize = new Vector2Int(4, 4);
 
     int segments = 100;
-    public float radius = 5f;
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class meshGenerator : MonoBehaviour
 
     private void Start()
     {
+        //Populate the list with random values.
         if (useRandomValues)
         {
 
@@ -49,13 +54,13 @@ public class meshGenerator : MonoBehaviour
                 item.chance = 95 / (items.Count-1);
                 item.name ="ItemNum" + i;
             }
-
+            //Reserved amount for the jackpot in case of use of random values.
             items[0].name = "jackpot";
             items[0].chance = 5;
             items[0].value = 10000;
 
         }
-
+        //Create the mesh according to the data. 
         MakeMeshData();
         CreateMesh();
     }
@@ -125,7 +130,7 @@ public class meshGenerator : MonoBehaviour
             percentage -= item.chance;
         }
 
-        Debug.LogError("Percentage is higher than total chance");
+        //Debug.LogError("Percentage is higher than total chance");
 
         return 0;
     }
@@ -152,7 +157,7 @@ public class meshGenerator : MonoBehaviour
     }
 
     
-    //
+    //Return the index of the triangle located at 12 o'clock. 
     public Item GetReward()
     {
         float rotationZ = transform.rotation.eulerAngles.z % 360f;

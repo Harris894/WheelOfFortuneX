@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class collidersGenerator : MonoBehaviour
 {
+    [Header("Settings")]
     public int numOfColliders;
     public float radius;
     public GameObject prefab;
+
+    //Instantiate objetcs into positions acquired by the RandomCircle method. 
     void Start()
     {
         Vector3 center = transform.position;
@@ -18,6 +21,8 @@ public class collidersGenerator : MonoBehaviour
             collider.transform.parent = gameObject.transform;
         }
     }
+
+    //Get positions around a perfect circle.
     Vector3 RandomCircle(Vector3 center, float radius, int a)
     {
         float ang = a;
