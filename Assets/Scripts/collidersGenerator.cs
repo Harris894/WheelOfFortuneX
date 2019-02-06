@@ -1,35 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class collidersGenerator : MonoBehaviour
 {
     [Header("Settings")]
-    public int numOfColliders;
-    public float radius;
     public GameObject prefab;
 
-    //Instantiate objetcs into positions acquired by the RandomCircle method. 
+    public TextMeshPro text;
+
+    public meshGenerator meshGen;
+
+    
     void Start()
     {
-        Vector3 center = transform.position;
-        for (int i = 0; i < numOfColliders; i++)
+        int percentage = 0;
+        foreach (var item in meshGen.items)//Loop through the list of items
         {
-            int a = i * 40;
-            Vector3 pos = RandomCircle(center, radius, a);
-            var collider = Instantiate(prefab, pos, Quaternion.identity);
-            collider.transform.parent = gameObject.transform;
+            percentage += item.chance;
+            Vector3 colPos = meshGen.CirclePosition(meshGen.radius, percentage / 100f);//Get the position for the collider according to percentage
+            Vector3 txtPos = meshGen.CirclePosition(meshGen.radius / 1.2f, (percentage - (item.chance / 2f)) / 100f);//Get position for textBoxes according to percentage
+            var collider = Instantiate(prefab, colPos, Quaternion.identity);//Instantiate the collider
+            collider.transform.parent = gameObject.transform;//Set the instantiated objects as children of current gameObject(to make them spin with the wheel)
+            text.text = item.value.ToString();//populate the text with the item's value
+            var textBox = Instantiate(text, txtPos, Quaternion.identity);//Instantiate the textbox
+            textBox.transform.SetParent(gameObject.transform, false);//Set it's parent the current gameObject
+
         }
     }
 
-    //Get positions around a perfect circle.
-    Vector3 RandomCircle(Vector3 center, float radius, int a)
-    {
-        float ang = a;
-        Vector3 pos;
-        pos.x = center.x + radius * Mathf.Sin(ang * Mathf.Deg2Rad);
-        pos.y = center.y + radius * Mathf.Cos(ang * Mathf.Deg2Rad);
-        pos.z = center.z;
-        return pos;
-    }
+
 }
+   

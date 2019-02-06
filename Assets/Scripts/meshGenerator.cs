@@ -93,7 +93,7 @@ public class meshGenerator : MonoBehaviour
     }
 
     //Get the position for each vertex that will be used to create a triangle
-    Vector3 CirclePosition(float radius, float percentage)
+    public Vector3 CirclePosition(float radius, float percentage)
     {
         float ang = 360f * percentage;
         Vector3 pos;
